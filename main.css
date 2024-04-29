@@ -1,0 +1,12 @@
+.baslik
+{
+    text-shadow:2px 2px 4px rgb(3, 127, 199);
+    font-family:Verdana, Geneva, Tahoma, sans-serif; /* Yazı tipi belirleniyor */
+    font-size: 60px; /* Yazı boyutu belirleniyor */
+    font-weight: bold; /* Yazı kalınlığı belirleniyor */
+    text-align: center; /* Metin hizalaması belirleniyor */
+    text-transform: uppercase; /* Metin büyüklüklerini büyük harfe dönüştürüyor */
+    line-height: 1.5; /* Satır yüksekliği belirleniyor */
+    letter-spacing: 1px; /* Harfler arası boşluk belirleniyor */
+    
+}
