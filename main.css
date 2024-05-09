@@ -1,12 +1,96 @@
-.baslik
-{
-    text-shadow:2px 2px 4px rgb(3, 127, 199);
-    font-family:Verdana, Geneva, Tahoma, sans-serif; /* Yazı tipi belirleniyor */
-    font-size: 60px; /* Yazı boyutu belirleniyor */
-    font-weight: bold; /* Yazı kalınlığı belirleniyor */
-    text-align: center; /* Metin hizalaması belirleniyor */
-    text-transform: uppercase; /* Metin büyüklüklerini büyük harfe dönüştürüyor */
-    line-height: 1.5; /* Satır yüksekliği belirleniyor */
-    letter-spacing: 1px; /* Harfler arası boşluk belirleniyor */
-    
+
+/* Başlık stilini ayarla */
+.baslik {
+    margin-top: 50px; /* Yazıyı biraz aşağı çekmek için */
+    text-shadow: none; /* Gölgelendirmeyi kaldır */
+    color: rgb(219, 219, 219); /* Yazı rengini ayarla */
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
+    font-weight: 600; /* Yazı kalınlığını ayarla */
+    font-style: normal; /* Yazı stilini ayarla */
+    font-size: 120px; /* Yazı boyutunu belirle */
+    text-align: center; /* Metin hizalamasını ayarla */
+    text-transform: uppercase; /* Metni büyük harfe dönüştür */
+    line-height: 3.0; /* Satır yüksekliğini ayarla */
+    letter-spacing: -.006em; /* Harf aralığını ayarla */
 }
+/* Body elementinin arka plan rengini siyah yap */
+body
+ {
+    background-image: url('resimler/siyah.jpg'); /* Arka plan resminin yolunu belirtin */
+    background-size: cover; /* Resmi ekran boyutuna sığdır */
+    background-repeat: no-repeat; /* Resmi tekrar etme */
+    background-attachment: fixed; /* Sayfa kaydırıldığında arka planın sabit kalmasını sağlar */
+}
+.header {
+    position: absolute;
+    top: 40%; /* Sayfanın yüksekliğinin yarısı kadar yukarıda */
+    left: 10%; /* Sayfanın sol kenarından %10 kadar içerde */
+    transform: translateY(-50%); /* Dikey hizalama için */
+    font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
+    color: white; /* Metin rengini beyaz olarak ayarlayın */
+    font-size: 48px; /* Metin boyutunu ayarlayın */
+}
+/* Dair Her Şey metnini T ile hizalanacak şekilde altına ekleyin */
+.altbaslik {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 46%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+    left: 10%; /* Sayfanın sol kenarından %10 kadar içerde */
+    transform: translateY(-50%); /* Dikey hizalama için */
+    font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
+    color: white; /* Metin rengini beyaz olarak ayarlayın */
+    font-size: 48px; /* Metin boyutunu ayarlayın */
+}
+
+.nav-item {
+    margin-right: 40px; /* Boşluğu azaltmak için sağ marj ekleyin */
+}
+
+/* Nav linklerinin metin rengini beyaz yapmak ve fontunu değiştirmek için */
+.nav-link {
+    color: white !important; /* Metin rengini beyaz olarak ayarlayın */
+    font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
+    font-size: 30px; /* Metin boyutunu ayarlayın */
+}
+
+/* Aktif (current) nav linkinin rengini belirgin hale getirmek için */
+.nav-link.active {
+    color: rgb(224, 58, 7) !important; /* Aktif link rengini belirgin hale getirin */
+}
+
+/* Devre dışı (disabled) nav linkinin rengini belirgin hale getirmek için */
+.nav-link.disabled {
+    color: lightgray !important; /* Devre dışı link rengini belirgin hale getirin */
+}
+
+.noktaKesme{
+    color: rgb(224, 58, 7) !important; /* Aktif link rengini belirgin hale getirin */
+    font-family:'Archivo Black', sans-serif ;
+    font-size: 48px; /* Metin boyutunu ayarlayın */
+}
+
+.dugme-container {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 53%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+    left: 18.5%; /* Sayfanın yatay ortasında */
+    transform: translate(-50%, -50%); /* Yatay ve dikey hizalama için */
+
+}
+
+.btn {
+    border-radius: 20px; /* Kenarların yumuşaklığı */
+    margin: 0 5px; /* Boşluk */
+    top: 36%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+    left: 10%; /* Sayfanın sol kenarından %10 kadar içerde */
+    padding: 10px 50px; /* Düğme içeriğinin etrafındaki boşlukları ayarla */
+}
+
+/* Küçük ekranlar için stil ayarları */
+@media only screen and (max-width: 768px) {
+    .nav-item {
+        margin-right: 20px; /* Küçük ekranlarda boşluğu azalt */
+    }
+    .nav-link {
+        font-size: 16px; /* Küçük ekranlarda metin boyutunu küçült */
+    }
+}
+
