@@ -16,10 +16,11 @@
 /* Body elementinin arka plan rengini siyah yap */
 body
  {
-    background-image: url('resimler/siyah.jpg'); /* Arka plan resminin yolunu belirtin */
+    background-image: url('resimler/arkaPalnımMevcut.jpg'); /* Arka plan resminin yolunu belirtin */
     background-size: cover; /* Resmi ekran boyutuna sığdır */
     background-repeat: no-repeat; /* Resmi tekrar etme */
-    background-attachment: fixed; /* Sayfa kaydırıldığında arka planın sabit kalmasını sağlar */
+    background-attachment:fixed; /* Sayfa kaydırıldığında arka planın sabit kalmasını sağlar */
+    height: 100vw;
 }
 .header {
     position: absolute;
@@ -38,14 +39,18 @@ body
     transform: translateY(-50%); /* Dikey hizalama için */
     font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
     color: white; /* Metin rengini beyaz olarak ayarlayın */
-    font-size: 48px; /* Metin boyutunu ayarlayın */
+    font-size: 48px; /* Metin boyutunu belirle (%'lik genişlikte boyut) */
 }
 
 .nav-item {
     margin-right: 40px; /* Boşluğu azaltmak için sağ marj ekleyin */
 }
 
-/* Nav linklerinin metin rengini beyaz yapmak ve fontunu değiştirmek için */
+.nav-item a:hover{
+    text-decoration:underline;
+    text-decoration-color:  rgb(224, 58, 7);
+}
+
 .nav-link {
     color: white !important; /* Metin rengini beyaz olarak ayarlayın */
     font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
@@ -84,13 +89,56 @@ body
     padding: 10px 50px; /* Düğme içeriğinin etrafındaki boşlukları ayarla */
 }
 
-/* Küçük ekranlar için stil ayarları */
-@media only screen and (max-width: 768px) {
-    .nav-item {
-        margin-right: 20px; /* Küçük ekranlarda boşluğu azalt */
-    }
-    .nav-link {
-        font-size: 16px; /* Küçük ekranlarda metin boyutunu küçült */
-    }
+.middle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+/* main.css */
 
+.carousel-item img {
+    border-radius: 20px; /* Resmin köşelerine yuvarlaklık uygula */
+    width: 100%; /* Resmin genişliğini %100 yap */
+    width: 600px;
+    height: 400px;
+    height: auto; /* Yüksekliği otomatik ayarla, oranları koru */
+    max-width: 100%; /* Maksimum genişlik belirle */
+    margin-top: 59rem;
+  }
+  
+/* Kart boyutları */
+.card {
+    width: 100%; /* Kartların genişliği %100 olacak şekilde ayarlandı */
+    max-width: 250px; /* Maksimum genişlik belirlendi */
+    margin-top: 300px;
+    margin: 0 auto; /* Kartların yatayda ortalanması için */
+  }
+  
+  /* Kartların hover efekti */
+.card:hover {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Kırmızı gölge */
+  }
+.carousel-caption{
+    border-radius: 20px;
+}
+.carousel-control-prev, .carousel-control-next {
+    top: auto; /* Yukarıdan olan konumu sıfırla */
+    bottom: 20px; /* Alttan 20 piksel uzaklıkta olacak şekilde ayarla */
+    transform: scale(1); /* Geçiş sırasında ölçeği sıfırla */
+  }
+  
+  .carousel-control-prev {
+    left: 5px; /* Sol kenardan 5 piksel içeriye al */
+  }
+  
+  .carousel-control-next {
+    right: 5px; /* Sağ kenardan 5 piksel içeriye al */
+  }
+  
+  .carousel-caption {
+    padding-bottom: 10px; /* Başlık alt boşluğunu ayarla */
+  }
+  
+  
