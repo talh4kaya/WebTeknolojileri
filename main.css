@@ -23,7 +23,7 @@ body
 }
 .header {
     position: absolute;
-    top: 40%; /* Sayfanın yüksekliğinin yarısı kadar yukarıda */
+    top: 38%; /* Sayfanın yüksekliğinin yarısı kadar yukarıda */
     left: 10%; /* Sayfanın sol kenarından %10 kadar içerde */
     transform: translateY(-50%); /* Dikey hizalama için */
     font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
@@ -33,12 +33,31 @@ body
 /* Dair Her Şey metnini T ile hizalanacak şekilde altına ekleyin */
 .altbaslik {
     position: absolute; /* Mutlak konumlandırma */
-    top: 46%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+    top: 43.4%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
     left: 10%; /* Sayfanın sol kenarından %10 kadar içerde */
     transform: translateY(-50%); /* Dikey hizalama için */
     font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
     color: white; /* Metin rengini beyaz olarak ayarlayın */
     font-size: 48px; /* Metin boyutunu belirle (%'lik genişlikte boyut) */
+}
+
+.dugme-container {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 49.4%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+    left: 18.5%; /* Sayfanın yatay ortasında */
+    transform: translate(-50%, -50%); /* Yatay ve dikey hizalama için */
+
+}
+
+.sekiller {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 53%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+    left:10%; /* Sayfanın yatay ortasında */
+    font-size: 40px; /* İkonların boyutunu değiştir */
+}
+
+.sekiller a {
+    text-decoration: none; /* Link altı çizgisini kaldır */
 }
 
 .nav-item {
@@ -70,14 +89,6 @@ body
     color: rgb(224, 58, 7) !important; /* Aktif link rengini belirgin hale getirin */
     font-family:'Archivo Black', sans-serif ;
     font-size: 48px; /* Metin boyutunu ayarlayın */
-}
-
-.dugme-container {
-    position: absolute; /* Mutlak konumlandırma */
-    top: 53%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
-    left: 18.5%; /* Sayfanın yatay ortasında */
-    transform: translate(-50%, -50%); /* Yatay ve dikey hizalama için */
-
 }
 
 .btn {
@@ -141,15 +152,14 @@ body
 
 .slider-text {
     position: absolute; /* Mutlak konumlandırma */
-    top: 15%; /* Sliderın altından 20 piksel yukarıda */
+    top: 20%; /* Sliderın altından 20 piksel yukarıda */
     left:10%;
     color: white; /* Metin rengini beyaz yap */
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
     font-size: 20px; /* Metin boyutunu ayarla */
     max-width: 80%; /* Metnin maksimum genişliğini ayarla */
+    text-align: left;
 }
-
-
 
 .footer {
     position: fixed;

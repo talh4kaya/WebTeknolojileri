@@ -1,0 +1,113 @@
+
+body
+ {
+    background-color:rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    height: 100vh;
+}
+
+.nav{
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-item {
+    margin-right: 40px; /* Boşluğu azaltmak için sağ marj ekleyin */
+
+}
+
+.nav-item a:hover{
+    text-decoration:underline;
+    text-decoration-color: rgb(219, 205, 11) !important;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255) !important; /* Metin rengini beyaz olarak ayarlayın */
+    font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
+    font-size: 20px; /* Metin boyutunu ayarlayın */
+}
+
+/* Aktif (current) nav linkinin rengini belirgin hale getirmek için */
+.nav-link.active {
+    color: rgb(219, 205, 11) !important; /* Aktif link rengini belirgin hale getirin */
+}
+
+.fk{
+    color: red;
+}
+
+.carousel {
+    width: 900px; /* Carousel'ın maksimum genişliği */
+    height: auto; /* Yüksekliği otomatik olarak ayarla */
+    margin-top: 6%;
+    margin-left: 2%;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item .btn-outline-primary,
+.carousel-item .btn-outline-success,
+.carousel-item .btn-outline-warning {
+    width:20%;
+    height: 5%;
+    font-size: 20px;
+    font-family:"SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */ ;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    color: white;
+}
+
+.carousel-inner{
+    height: 635px;
+    width: 900px;
+    border-radius: 23px; /* Slider'ın köşelerini yumuşat */
+}
+
+/* Slider'ı hizalama */
+.carousel-container {
+    border-radius: 20px solid;
+    display: flex;
+    left:10%;
+}
+
+.slider-text {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 20%; /* Sliderın altından 20 piksel yukarıda */
+    left:10%;
+    color: white; /* Metin rengini beyaz yap */
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
+    font-size: 20px; /* Metin boyutunu ayarla */
+    max-width: 80%; /* Metnin maksimum genişliğini ayarla */
+    text-align: left;
+}
+
+.kucukbasliklar{
+    color: red;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-style: bold;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
+    color: white;
+    letter-spacing: 3px; 
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width:700px){
+    .test{
+        grid-template-columns: minmax(100px,2fr);
+
+    }
+}
