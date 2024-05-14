@@ -15,7 +15,7 @@
 }
 /* Body elementinin arka plan rengini siyah yap */
 body
- {
+{
     background-image: url('resimler/arkaPalnımMevcut.jpg'); /* Arka plan resminin yolunu belirtin */
     background-size: cover; /* Resmi ekran boyutuna sığdır */
     background-repeat: no-repeat; /* Resmi tekrar etme */
@@ -71,7 +71,6 @@ body
 
 .nav-link {
     color: white !important; /* Metin rengini beyaz olarak ayarlayın */
-    font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
     font-size: 30px; /* Metin boyutunu ayarlayın */
 }
 
@@ -80,10 +79,6 @@ body
     color: rgb(224, 58, 7) !important; /* Aktif link rengini belirgin hale getirin */
 }
 
-/* Devre dışı (disabled) nav linkinin rengini belirgin hale getirmek için */
-.nav-link.disabled {
-    color: lightgray !important; /* Devre dışı link rengini belirgin hale getirin */
-}
 
 .noktaKesme{
     color: rgb(224, 58, 7) !important; /* Aktif link rengini belirgin hale getirin */

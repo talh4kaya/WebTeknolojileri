@@ -1,113 +1,183 @@
-
-body
- {
-    background-color:rgb(0, 0, 0);
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    height: 100vh;
+html{
+    scroll-behavior: smooth;
 }
 
-.nav{
+html,body{
+    height: 100%;
+    background-color: #000000;
+}
+
+
+.first-body {
+    background-color:rgb(0, 0, 0);
+    background-repeat: no-repeat; /* Resmi tekrar etme */
+    background-size: cover; /* Resmi ekran boyutuna sığdır */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ekran yüksekliği kadar olacak şekilde ayarlandı */
+    box-sizing: border-box;
+    background-position: center 45px; /* Resmi dikeyde 50 piksel aşağıya kaydır */
+
+}
+
+.nav {
     background-color: rgb(0, 0, 0);
 }
 
 .nav-item {
-    margin-right: 40px; /* Boşluğu azaltmak için sağ marj ekleyin */
+    margin-right: 40px;
+    /* Boşluğu azaltmak için sağ marj ekleyin */
 
 }
 
-.nav-item a:hover{
-    text-decoration:underline;
+.nav-item a:hover {
+    text-decoration: underline;
     text-decoration-color: rgb(219, 205, 11) !important;
 }
 
 .nav-link {
-    color: rgb(255, 255, 255) !important; /* Metin rengini beyaz olarak ayarlayın */
-    font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
-    font-size: 20px; /* Metin boyutunu ayarlayın */
+    color: rgb(255, 255, 255) !important;
+    /* Metin rengini beyaz olarak ayarlayın */
+    font-family: 'Archivo Black', sans-serif;
+    /* Yeni fontu belirtin */
+    font-size: 20px;
+    /* Metin boyutunu ayarlayın */
 }
 
 /* Aktif (current) nav linkinin rengini belirgin hale getirmek için */
 .nav-link.active {
-    color: rgb(219, 205, 11) !important; /* Aktif link rengini belirgin hale getirin */
+    color: rgb(219, 205, 11) !important;
+    /* Aktif link rengini belirgin hale getirin */
 }
 
-.fk{
-    color: red;
-}
-
-.carousel {
-    width: 900px; /* Carousel'ın maksimum genişliği */
-    height: auto; /* Yüksekliği otomatik olarak ayarla */
-    margin-top: 6%;
-    margin-left: 2%;
-}
-
-.carousel-item {
-    position: relative;
-}
-
-.carousel-item .btn-outline-primary,
-.carousel-item .btn-outline-success,
-.carousel-item .btn-outline-warning {
-    width:20%;
-    height: 5%;
-    font-size: 20px;
-    font-family:"SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */ ;
-    position: absolute;
-    top: 64%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 30px;
-    color: white;
-}
-
-.carousel-inner{
-    height: 635px;
-    width: 900px;
-    border-radius: 23px; /* Slider'ın köşelerini yumuşat */
-}
-
-/* Slider'ı hizalama */
-.carousel-container {
-    border-radius: 20px solid;
+.slider-container {
     display: flex;
-    left:10%;
 }
-
-.slider-text {
+  
+.slider {
+    width: calc(50% - 10px); /* %50 genişlik ve 10 piksel sağ sol boşluk */
+    margin-right: 20px; /* sağ tarafta 20 piksel boşluk */
+    border-radius: 20px; /* border radius */
+}
+  
+.slider:last-child {
+    margin-right: 0; /* son slaytta boşluk olmayacak */
+}
+  
+.slider img {
+    width: 100%;
+    height: auto;
+    margin-right: -7px; /* Fotoğrafı sağa kaydır */
+}
+  
+.carousel-caption {
+    background: rgba(255, 0, 0, 0);
+    padding: 10px;
+    color: #fff;
+    position: absolute;
+    top: 0%; /* İstediğiniz miktarda üst boşluk için bir değer belirleyin */
+    left: 0;
+    right: 0;
+    margin-left:0%;
+    overflow: hidden;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 999; /* Diğer içeriklerin üstünde olacak şekilde yüksek bir değer */
+}
+ 
+.slidertext2,
+.slidertext3,
+.slidertext{
     position: absolute; /* Mutlak konumlandırma */
-    top: 20%; /* Sliderın altından 20 piksel yukarıda */
-    left:10%;
-    color: white; /* Metin rengini beyaz yap */
+    color: rgb(255, 255, 255); /* Metin rengini beyaz yap */
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
-    font-size: 20px; /* Metin boyutunu ayarla */
+    font-size: 17px;
+    left:10%;
+    top:21%;
     max-width: 80%; /* Metnin maksimum genişliğini ayarla */
-    text-align: left;
+    text-align:left ;
 }
 
-.kucukbasliklar{
+.slidertext2{
+    top:7%;
+}
+
+.slidertext3{
+    top:3%;
+}
+
+.corumbasliklari2,
+.corumbasliklari3,
+.corumbasliklari{
+    position: absolute;
+    color: rgb(221, 208, 28); /* Metin rengini beyaz yap */
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
+    font-size: 19px;
+}
+
+.corumbasliklari2{
     color: red;
+}
+.corumbasliklari3{
+    margin-top: 0.1%;
+    left: 40%;
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    text-shadow: 1px 0px 3px white;
+}
+
+.slideriçi{
+    max-width: 330px;
+    max-height: 300px;
+    margin-right: 10px; /* Sağ boşluk ekleyin */
+    margin-left: 17px;  /* Sol boşluk ekleyin */
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.slideriçi2{
+    max-width: 350px;
+    max-height: 350px;
+    padding-right:10px;
+    margin-top:1%;
+    margin-right: 20px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     font-style: bold;
-    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
-    color: white;
-    letter-spacing: 3px; 
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* Yazı tipini ayarla */
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
     text-align: center;
     padding: 10px 0;
 }
 
-@media (max-width:700px){
-    .test{
-        grid-template-columns: minmax(100px,2fr);
+@media (max-width:700px) {
+    .test {
+        grid-template-columns: minmax(100px, 2fr);
 
     }
+    .slider-container {
+        flex-direction: column; /* Sliderlar dikey olarak sıralansın */
+      }
+    
+      .slider {
+        width: 100%; /* Sliderların tam genişlik almasını sağlayın */
+        margin-right: 0; /* Sağ boşluğu kaldırın */
+        margin-bottom: 20px; /* Alt boşluk ekleyin */
+      }
+      .nav-link {
+        font-size: 12px; /* Metin boyutunu küçült */
+      }
+      .nav-item {
+        margin-right: 10px; /* Bağlantılar arası sağ boşluğu azalt */
+      }
 }
