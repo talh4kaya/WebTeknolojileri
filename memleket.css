@@ -46,7 +46,7 @@ html,body{
 
 /* Aktif (current) nav linkinin rengini belirgin hale getirmek için */
 .nav-link.active {
-    color: rgb(219, 205, 11) !important;
+    color:  rgb(219, 198, 11) !important;
     /* Aktif link rengini belirgin hale getirin */
 }
 

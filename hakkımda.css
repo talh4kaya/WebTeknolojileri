@@ -1,115 +1,182 @@
-html{
-    scroll-behavior: smooth;
+html,
+body {
+  height: 600vh;
+  margin: 0;
+  background-color: #000000;
+  scroll-behavior: smooth;
 }
-
-html,body{
-    height: 100%;
-    background-color: #ffffff;
-}
-
 
 .first-body {
-    background-color:rgb(0, 0, 0);
-    background-repeat: no-repeat; /* Resmi tekrar etme */
-    background-size: cover; /* Resmi ekran boyutuna sığdır */
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Ekran yüksekliği kadar olacak şekilde ayarlandı */
-    box-sizing: border-box;
-    background-position: center 45px; /* Resmi dikeyde 50 piksel aşağıya kaydır */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.middle-content {
+  flex: 1;
 }
 
 .nav {
-    background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 .nav-item {
-    margin-right: 40px;
-    /* Boşluğu azaltmak için sağ marj ekleyin */
+  margin-right: 40px;
+  /* Boşluğu azaltmak için sağ marj ekleyin */
 
 }
 
 .nav-item a:hover {
-    text-decoration: underline;
-    text-decoration-color: rgb(255, 255, 255) !important;
+  text-decoration: underline;
+  text-decoration-color: rgb(11, 143, 219) !important;
 }
 
-.nav-link.active,
-.nav-link{
-    color: rgb(255, 255, 255) !important;
-    /* Metin rengini beyaz olarak ayarlayın */
-    font-family: 'Archivo Black', sans-serif;
-    /* Yeni fontu belirtin */
-    font-size: 30px;
-    /* Metin boyutunu ayarlayın */
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+  /* Metin rengini beyaz olarak ayarlayın */
+  font-family: 'Archivo Black', sans-serif;
+  /* Yeni fontu belirtin */
+  font-size: 20px;
+  /* Metin boyutunu ayarlayın */
 }
 
-.nav-link.active{
-    color: greenyellow !important;
+/* Aktif (current) nav linkinin rengini belirgin hale getirmek için */
+.nav-link.active {
+  color:  rgb(11, 143, 219) !important;
+  /* Aktif link rengini belirgin hale getirin */
 }
 
 
-.flip-card {
-    margin-top: 3.5%; /* Boşluğu azaltmak için sağ marj ekleyin */
-    margin-left: 13%; /* Boşluğu azaltmak için sağ marj ekleyin */
-    background-color: transparent;
-    width: 400px;
-    height: 500px;
-    perspective: 1000px;
-    border-radius: 20px;
+.slider-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
 }
 
-.flip-card h,
-.flip-card p{
-    margin-top: 10%; /* Boşluğu azaltmak için sağ marj ekleyin */
-    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
-    font-size: 19px;
+
+.slider {
+  width: 85%;
+  height: 670px;
+  margin-top: 1.5%;
+  margin-right: 20px;
+  margin-left: 7.5%;
+  border-radius: 20px;
+}
+
+.slider img {
+  width: 90%;
+  height: 670px;
+  margin-right: -7px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-caption {
+  background: rgba(255, 0, 0, 0);
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  text-align: left;
+}
+
+.slidertext {
+  position: absolute;
+  /* Mutlak konumlandırma */
+  color: rgb(255, 255, 255);
+  /* Metin rengini beyaz yap */
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Yazı tipini ayarla */
+  font-size: 19px;
+  margin-left: 7%;
+  margin-top: 5%;
+  max-width: 85%;
+  /* Metnin maksimum genişliğini ayarla */
+  text-align: left;
+}
+
+.hakkımdabaslik {
+  font-size: 40px;
+  color: azure;
+  margin-top: 5%;
+  margin-left: 7%;
+}
+
+.card2{
+  width: 500px;
+  height: 300px;
+  background-color: #f8f9fa; /* Arka plan rengi */
+  border: 1px solid #ced4da; /* Kenarlık rengi */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px  #4c5055; /* Başlık rengi */
+  font-family: Arial, sans-serif; /* Yazı fontu */
+  margin-top: 3%;
+  z-index: 999;
+}
+
+.card-body{
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+  background-color: #000000;
+}
+
+.card-title {
+
+  color: #007bff; /* Bağlantı rengi */
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px; /* Başlık font boyutu */
+}
+
+.card-subtitle {
+  color: rgb(255, 255, 255);
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem; /* Alt başlık font boyutu */
 
 }
 
-  
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-  
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-  
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-  
-.flip-card-front {
-    width: 400px;
-    height: 500px;
-    border-radius: 20px;
-    background-color: #bbb;
-    color: black;
-}
-  
-.flip-card-back {
-    width: 400px;
-    height: 500px;
-    border-radius: 20px;
-    background-color: #000000;
-    color: white;
-    transform: rotateY(180deg);
+.card-text {
+  font-size: 21px; /* Metin font boyutu */
+  color: rgb(255, 255, 255);
+  /* Metin rengini beyaz yap */
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.flip-card img{
-    width: 440px;
-    height: 500px;
-    border-radius: 20px;
+.card-link2
+.card-link3
+.card-link {
+  color: #007bff; /* Bağlantı rengi */
+  text-decoration: none; /* Bağlantı altı çizgi kaldırma */
+  display: block; /* Önceki yatay düzeni blok düzenine dönüştürmek için */
+  text-align: right;
+  font-size: 19px;
 }
+
+
+.card-link:hover {
+  text-decoration: underline; /* Üzerine gelindiğinde altı çizgi ekleme */
+}
+
+.card-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-style: bold;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Yazı tipini ayarla */
+  color: white;
+  letter-spacing: 3px;
+  text-align: center;
+}
+

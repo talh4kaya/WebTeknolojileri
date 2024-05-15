@@ -60,23 +60,34 @@ body
     text-decoration: none; /* Link altı çizgisini kaldır */
 }
 
-.nav-item {
-    margin-right: 40px; /* Boşluğu azaltmak için sağ marj ekleyin */
+.nav {
+    background-color: rgb(0, 0, 0);
 }
 
-.nav-item a:hover{
-    text-decoration:underline;
-    text-decoration-color:  rgb(224, 58, 7);
+.nav-item {
+    margin-right: 40px;
+    /* Boşluğu azaltmak için sağ marj ekleyin */
+
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(219, 205, 11) !important;
 }
 
 .nav-link {
-    color: white !important; /* Metin rengini beyaz olarak ayarlayın */
-    font-size: 30px; /* Metin boyutunu ayarlayın */
+    color: rgb(255, 255, 255) !important;
+    /* Metin rengini beyaz olarak ayarlayın */
+    font-family: 'Archivo Black', sans-serif;
+    /* Yeni fontu belirtin */
+    font-size: 30px;
+    /* Metin boyutunu ayarlayın */
 }
 
 /* Aktif (current) nav linkinin rengini belirgin hale getirmek için */
 .nav-link.active {
-    color: rgb(224, 58, 7) !important; /* Aktif link rengini belirgin hale getirin */
+    color:  rgb(224, 58, 7) !important; /* Aktif link rengini belirgin hale getirin */
+    /* Aktif link rengini belirgin hale getirin */
 }
 
 
