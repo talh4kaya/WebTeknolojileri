@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="talhakaya,talh4kaya,k19">
-  <title>deneme</title>
-  <!--dahil ettiğim linkler kısmı-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="talhakaya,talh4kaya,k19">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <!--dahil ettiğim css classları vs-->
-  <link rel="stylesheet" href="hakkımda.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>İletişim Sayfası</title>
+    <link rel="stylesheet" href="forum.css">
 </head>
-
 <body>
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="talha.html">TK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="memleket.html">MEMLEKETİM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hakkımda.html">HAKKIMDA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="forum.html">FORUM</a>
+        </li>
+    </ul>
 
 
+    <div id="app">
+        <form @submit.prevent="validateForm">
+            <div>
+                <label for="name">Ad:</label>
+                <input type="text" id="name" v-model="form.name">
+                <span v-if="errors.name">{{ errors.name }}</span>
+            </div>
+            <div>
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" v-model="form.email">
+                <span v-if="errors.email">{{ errors.email }}</span>
+            </div>
+            <div>
+                <label for="message">Mesaj:</label>
+                <textarea id="message" v-model="form.message"></textarea>
+                <span v-if="errors.message">{{ errors.message }}</span>
+            </div>
+            <div>
+                <label for="gender">Cinsiyet:</label>
+                <select id="gender" v-model="form.gender">
+                    <option value="male">Erkek</option>
+                    <option value="female">Kadın</option>
+                </select>
+                <span v-if="errors.gender">{{ errors.gender }}</span>
+            </div>
+            <div>
+                <br><label for="hobby1">Spor</label>
+                <input type="checkbox" id="hobby1" value="Spor" v-model="form.hobbies">
+                <label for="hobby2">Seyahat</label>
+                <input type="checkbox" id="hobby2" value="Seyahat" v-model="form.hobbies">
+                <label for="hobby3">Müzik</label>
+                <input type="checkbox" id="hobby3" value="Film" v-model="form.hobbies"><br><br>
+            </div>
+            <div style="margin-left: 70%;">
+                <button type="submit" class="btn btn-outline-primary">Formu Gönder</button>
+            </div>
+        </form>
+    </div>
 
-
-
-
-
-
-      <footer class="footer">
+    <footer class="footer">
         <div class="container">
           <span class="text-muted"> <a href="https://www.sakarya.edu.tr/" target="_blank">SAKARYA UNIVERSITY.</a></span>
           <span class="text-muted">Design By TK</span>
         </div>
-      </footer>
+    </footer>
 
-  <!-- script etiketleri -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="app.js"></script>
 </body>
 </html>
+
