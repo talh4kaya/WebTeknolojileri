@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     new Vue({
-        el: '#app',
+        el: '#kayıt',
         data: {
             form: {
                 name: '',
                 email: '',
-                message: '',
-                gender: ''
+                sifre: '',
             },
             errors: {}
         },
@@ -21,12 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (!this.validEmail(this.form.email)) {
                     this.errors.email = 'Geçerli bir e-posta adresi girin.';
                 }
-                if (!this.form.message || this.form.message.length < 10) {
-                    this.errors.message = 'Mesaj en az 10 karakter olmalıdır.';
+                if (!this.form.sifre || this.form.sifre.length < 7) {
+                    this.errors.sifre = 'Şifre en az 7 karakter olmalıdır.';
                 }
-                if (!this.form.gender) {
-                    this.errors.gender = 'Lütfen cinsiyetinizi seçin.';
-                }
+
                 // If there are no errors, form submission can proceed
                 if (Object.keys(this.errors).length === 0) {
                     // Submit the form
@@ -42,8 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 this.form = {
                     name: '',
                     email: '',
-                    message: '',
-                    gender: ''
+                    sifre: '',
                 };
                 this.errors = {};
             }

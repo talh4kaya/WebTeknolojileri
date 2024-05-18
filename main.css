@@ -178,3 +178,109 @@ body
     text-align: center;
     padding: 10px 0;
 }
+
+@media (max-width:1280px) {
+    .nav-link {
+        font-size: 12px;
+        /* Metin boyutunu küçült */
+    }
+
+    .nav-item {
+        margin-right: 10px;
+        /* Bağlantılar arası sağ boşluğu azalt */
+    }  
+
+    .header {
+        position: absolute;
+        top: 8%; /* Sayfanın yüksekliğinin yarısı kadar yukarıda */
+        left: 10%; /* Sayfanın sol kenarından %10 kadar içerde */
+        transform: translateY(-50%); /* Dikey hizalama için */
+        font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
+        color: white; /* Metin rengini beyaz olarak ayarlayın */
+        font-size: 28px; /* Metin boyutunu ayarlayın */
+    }
+    /* Dair Her Şey metnini T ile hizalanacak şekilde altına ekleyin */
+    .altbaslik {
+        position: absolute; /* Mutlak konumlandırma */
+        top: 10.5%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+        left: 10.5%; /* Sayfanın sol kenarından %10 kadar içerde */
+        transform: translateY(-50%); /* Dikey hizalama için */
+        font-family: 'Archivo Black', sans-serif; /* Yeni fontu belirtin */
+        color: white; /* Metin rengini beyaz olarak ayarlayın */
+        font-size: 18px; /* Metin boyutunu belirle (%'lik genişlikte boyut) */
+    }
+    .sekiller {
+        position: absolute; /* Mutlak konumlandırma */
+        top: 14%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+        left:10%; /* Sayfanın yatay ortasında */
+        font-size: 20px; /* İkonların boyutunu değiştir */
+        z-index: 999;
+    }
+
+    .dugme-container {
+        position: absolute; /* Mutlak konumlandırma */
+        top: 37%; /* Sayfanın yüksekliğinin yarısı artı 50 piksel aşağıda */
+        left: 30%; /* Sayfanın yatay ortasında */
+        transform: translate(-50%, -50%); /* Yatay ve dikey hizalama için */
+        display: flex; /* Butonları yatay hizalamak için */
+        justify-content: space-between; /* Aralarında boşluk bırakarak yatay hizalama */
+        width: 200px; /* Butonların genişliği */
+        height: 36.5%;
+        z-index: 999;
+    }
+
+    /* İki buton */
+    .dugme-container .btn {
+        width: 170px; /* Butonların genişliği */
+        height: 13%;
+        z-index: 999;
+    }
+
+    .carousel-item img {
+        background-size: cover;
+        margin-top:3%;
+        width: 98%;
+        height: 90%;
+        overflow: hidden;
+    }
+    
+    .carousel-item.active,
+    .carousel-inner,
+    .carousel.slide {
+        margin-top: 23%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+        height: 90%;
+    }
+    
+    .slider-text {
+        position: absolute; /* Mutlak konumlandırma */
+        top: 20%; /* Sliderın altından 20 piksel yukarıda */
+        left:10%;
+        color: white; /* Metin rengini beyaz yap */
+        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
+        font-size: 76%; /* Metin boyutunu ayarla */
+        max-width: 80%; /* Metnin maksimum genişliğini ayarla */
+        text-align: left;
+    }
+
+    .carousel-item .btn-outline-primary,
+    .carousel-item .btn-outline-success,
+    .carousel-item .btn-outline-warning {
+        width:27%;
+        height: 10%;
+        font-size: 20px;
+        font-family:"SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */ ;
+        position: absolute;
+        margin-top: 44%;
+        left: 48%;
+        padding: 10px 20px;
+        font-size: 9.5px;
+        border-radius: 30px;
+        color: white;
+    }
+
+    
+    
+}

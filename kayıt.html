@@ -8,8 +8,8 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <title>İletişim Sayfası</title>
-    <link rel="stylesheet" href="forum.css">
+    <title>Kayıt Sayfası</title>
+    <link rel="stylesheet" href="kayıt.css">
 </head>
 <body>
     <ul class="nav justify-content-center">
@@ -27,11 +27,11 @@
         </li>
     </ul>
 
-    <div id="app" class="butuncard">
-        <form id="myForm" action="http://localhost/forum.php" method="post" @submit.prevent="submitForm">
+    <div id="kayıt" class="butuncard">
+        <form id="myForm" action="http://localhost/kayıt.php" method="post" @submit.prevent="submitForm">
             <div>
-                <label for="name">Ad:</label>
-                <input type="text" name="name" v-model="form.name">
+                <label for="name">Kullanıcı Adı:</label>
+                <input type="text" name="kullanıcıAdı" v-model="form.name">
                 <span v-if="errors.name">{{ errors.name }}</span>
             </div>
             <div>
@@ -40,21 +40,13 @@
                 <span v-if="errors.email">{{ errors.email }}</span>
             </div>
             <div>
-                <label for="message">Mesaj:</label>
-                <textarea name="message" v-model="form.message"></textarea>
-                <span v-if="errors.message">{{ errors.message }}</span>
+                <label for="sifre">Şifre:</label>
+                <input type="password" name="sifre" v-model="form.sifre">
+                <span v-if="errors.sifre">{{ errors.sifre }}</span>
             </div>
-            <div>
-                <label for="gender">Cinsiyet:</label>
-                <select name="gender" v-model="form.gender">
-                    <option value="male">Erkek</option>
-                    <option value="female">Kadın</option>
-                </select>
-                <span v-if="errors.gender">{{ errors.gender }}</span>
-            </div>
-            <div style="margin-left: 70%;">
-                <button type="submit" class="btn btn-outline-primary">Formu Gönder</button>
-                <button type="button" class="btn btn-outline-primary" @click="resetForm">Temizle</button>
+            <div class="butonlar">
+                <button type="submit" class="btnmavi2">Kayıt Ol</button>
+                <button type="button" class="btnkırmızı" @click="resetForm">Temizle</button>
             </div>
         </form>
     </div>
@@ -67,6 +59,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="app.js"></script>
+    <script src="kayıt.js"></script>
 </body>
 </html>

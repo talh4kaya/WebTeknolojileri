@@ -42,7 +42,7 @@ body {
 
 /* Aktif (current) nav linkinin rengini belirgin hale getirmek için */
 .nav-link.active {
-  color:  rgb(11, 143, 219) !important;
+  color: rgb(11, 143, 219) !important;
   /* Aktif link rengini belirgin hale getirin */
 }
 
@@ -107,19 +107,23 @@ body {
   margin-left: 7%;
 }
 
-.card2{
+.card2 {
   width: 500px;
   height: 300px;
-  background-color: #f8f9fa; /* Arka plan rengi */
-  border: 1px solid #ced4da; /* Kenarlık rengi */
+  background-color: #f8f9fa;
+  /* Arka plan rengi */
+  border: 1px solid #ced4da;
+  /* Kenarlık rengi */
   border-radius: 20px;
-  box-shadow: 0 4px 8px  #4c5055; /* Başlık rengi */
-  font-family: Arial, sans-serif; /* Yazı fontu */
+  box-shadow: 0 4px 8px #4c5055;
+  /* Başlık rengi */
+  font-family: Arial, sans-serif;
+  /* Yazı fontu */
   margin-top: 3%;
   z-index: 999;
 }
 
-.card-body{
+.card-body {
   border-radius: 20px;
   width: 500px;
   height: 300px;
@@ -128,38 +132,44 @@ body {
 
 .card-title {
 
-  color: #007bff; /* Bağlantı rengi */
+  color: #007bff;
+  /* Bağlantı rengi */
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px; /* Başlık font boyutu */
+  font-size: 24px;
+  /* Başlık font boyutu */
 }
 
 .card-subtitle {
   color: rgb(255, 255, 255);
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem; /* Alt başlık font boyutu */
+  font-size: 1rem;
+  /* Alt başlık font boyutu */
 
 }
 
 .card-text {
-  font-size: 21px; /* Metin font boyutu */
+  font-size: 21px;
+  /* Metin font boyutu */
   color: rgb(255, 255, 255);
   /* Metin rengini beyaz yap */
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.card-link2
-.card-link3
-.card-link {
-  color: #007bff; /* Bağlantı rengi */
-  text-decoration: none; /* Bağlantı altı çizgi kaldırma */
-  display: block; /* Önceki yatay düzeni blok düzenine dönüştürmek için */
+.card-link2 .card-link3 .card-link {
+  color: #007bff;
+  /* Bağlantı rengi */
+  text-decoration: none;
+  /* Bağlantı altı çizgi kaldırma */
+  display: block;
+  /* Önceki yatay düzeni blok düzenine dönüştürmek için */
   text-align: right;
   font-size: 19px;
 }
 
 
 .card-link:hover {
-  text-decoration: underline; /* Üzerine gelindiğinde altı çizgi ekleme */
+  text-decoration: underline;
+  /* Üzerine gelindiğinde altı çizgi ekleme */
 }
 
 .card-group {
@@ -205,4 +215,115 @@ body {
   width: 100%;
   height: auto;
   border-radius: 20px 20px 0 0;
+}
+
+
+@media screen and (max-width: 900px) {
+  .body{
+    background-color: #f8f9fa;
+  }
+  .nav-link {
+    font-size: 12px;
+    /* Metin boyutunu küçült */
+  }
+
+  .nav-item {
+    margin-right: 10px;
+    /* Bağlantılar arası sağ boşluğu azalt */
+  }
+
+  /* Slider stil ayarları */
+  .slider {
+    width: 100%;
+    height: auto;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 40%;
+    border-radius: 0;
+    
+  }
+
+  .slidertext {
+    font-size: 16px;
+    margin: 5% 7%;
+    overflow: visible;
+    z-index: 999;
+  }
+
+  /* Card stil ayarları */
+  .middle-content {
+    padding-bottom: 20px;
+  }
+
+  .carousel-caption {
+    margin-bottom: 40px;
+  }
+
+  /* Card-group'u alt alta sırala */
+  /* Card-group'u alt alta sırala */
+  .card-group {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80%; /* Kart gruplarının üst boşluğunu artır */
+    margin-bottom: 40px; /* Kart gruplarının alt boşluğunu artır */
+  }
+
+  /* Kartların genişliğini 100% yap */
+  .card2 {
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 20px; /* Kartların alt boşluğunu artır */
+  }
+
+
+
+  .card-body {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 18px;
+  }
+
+  .card-link {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  /* Footer stil ayarları */
+  .footer {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  /* Film kartı stil ayarları */
+  .film-kart {
+    margin-top: 10%;
+  }
+
+  .film {
+    width: calc(50% - 20px);
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .film img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
 }

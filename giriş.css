@@ -37,8 +37,8 @@ body {
 form {
     background: rgb(255, 255, 255);
     width: 30%;
-    height: 70%;
-    margin-top: 4%;
+    height:450px;
+    margin-top: 8%;
     margin-left: 34%;
     padding: 20px;
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -66,16 +66,6 @@ select {
     margin-top: 2%;
 }
 
-input[type="checkbox"] {
-    width: auto;
-    /* Checkboxları genişletmemek için */
-    margin-right: 5px;
-}
-
-label[for^="hobby"] {
-    display: inline-block;
-    margin-right: 15px;
-}
 
 span {
     color: rgb(240, 16, 0);
@@ -83,21 +73,32 @@ span {
 }
 
 
-.btn {
-    padding: 10px 15px;
-    border: none;
-    background-color: #2630bb;
-    color: #fff;
+.butonlar{
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Yazı tipini ayarla */
     cursor: pointer;
-    right: 30%;
-    border-radius: 30px;
-    font-family: 'Archivo Black', sans-serif;
 }
 
-button:nth-child(2) {
-    background-color: brown; 
-    margin-top: 7%; 
-    width: 152px;
+.btnmavi2 {
+    border-width: 1px; /* Çerçeve kalınlığını 2 piksel yapar */
+    border-color: rgba(0, 0, 255, 0.911);
+    background-color: #d41b1b00;
+    width:40%;
+    height: 45px;
+    margin-top: 6%;
+    margin-left: 9%;
+    border-radius: 30px;
+    color: blue;
+   
+}
+
+.btnkırmızı {
+    border-width: 1px; /* Çerçeve kalınlığını 2 piksel yapar */
+    width:40%;
+    background-color: #d41b1b00;
+    height: 45px;
+    border-color: red; 
+    border-radius: 30px;
+    color: #d41b1b;
 }
 
 
@@ -133,7 +134,7 @@ button:nth-child(2) {
         height: 90%;
         margin-left: 4%;
         margin-right: 4%;
-        margin-top: 10%;
+        margin-top: 40%;
         /* Yazı tipini ayarla */
         border-radius: 20px;
     }
@@ -150,7 +151,7 @@ button:nth-child(2) {
         bottom: 0;
     }
 
-    button:nth-child(2) {
+    .btnkırmız {
         background-color: brown; 
         margin-top: 7%; 
         width: auto;
